@@ -13,7 +13,7 @@ function Product() {
     return (
       <View style={styles.container}>
         <Header title={"Product"} />
-        <Textgit>Product</Text>
+        <Text>Product</Text>
       </View>
     )
   }
