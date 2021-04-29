@@ -13,10 +13,10 @@ export default function App() {
     <NativeRouter>
       <StatusBar backgroundColor="black" barStyle="light-content" />
       <View style={styles.container}>
-        <Navbar />
         <Route exact path="/" component={Products} />
         <Route path="/categories" component={Categories} />
         <Route path="/orders" component={Orders} />
+        <Navbar />
       </View>
     </NativeRouter>
   );

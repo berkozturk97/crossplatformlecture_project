@@ -1,10 +1,10 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Platform } from "react-native";
 
-export default function Header() {
+export default function Header({ title }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Deneme</Text>
+      <Text style={styles.header}>{title}</Text>
     </View>
   );
 }
@@ -12,12 +12,11 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "black",
-    height: 80,
+    height: Platform.OS === 'ios' ? 80 : 50,
   },
   header: {
-    textAlign: "center",
     marginTop: 10,
-    paddingTop: 25,
+    paddingTop: Platform.OS === 'ios' ? 25 : 0,
     paddingHorizontal: 15,
     color: "white",
     fontSize: 30,

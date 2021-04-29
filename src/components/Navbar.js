@@ -38,7 +38,7 @@ export default function Navbar() {
         </View>
       </Link>
       <Link
-        to="/topics"
+        to="/orders"
         underlayColor="tranparent"
         style={styles.navItem}
         onPress={() => changeTabImage(2)}
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   nav: {
     bottom: 0,
     position: 'absolute',
+    zIndex: 10,
     backgroundColor: 'black',
     flex: 6,
     justifyContent: 'space-evenly',

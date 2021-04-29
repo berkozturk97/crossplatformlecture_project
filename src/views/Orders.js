@@ -3,25 +3,20 @@ import { StyleSheet, Text, View } from "react-native";
 import Header from '../components/Header';
 
 function Orders() {
-    return (
-        <View style={styles.container}>
-            <Header />
-        </View>
-        
-    )
+
+  return (
+    <View style={styles.container}>
+      <Header title={"Orders"} />
+      <Text >Orders</Text>
+    </View>
+  )
 }
+
 const styles = StyleSheet.create({
-    container: {
-      marginTop: 25,
-      flex: 1,
-    },
-    header: {
-      marginTop: 10,
-      paddingHorizontal: 15,
-      color: "white",
-      fontSize: 30,
-    },
-  });
-  
+  container: {
+    flex: 1,
+    backgroundColor: 'black'
+  },
+});
 
 export default Orders;
