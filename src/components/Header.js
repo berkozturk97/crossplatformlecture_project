@@ -1,41 +1,25 @@
 import React from "react";
-import { StyleSheet, Text, View, AppRegistry } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Header() {
-
   return (
-      <View style={styles.container}>
-     
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.header}>Deneme</Text>
+    </View>
   );
-
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 25,
-    flex: 1
+    backgroundColor: "black",
+    height: 80,
   },
   header: {
-    fontSize: 20,
-    
-  },
-  nav: {
-    flex: 1,
-    flexDirection: "row",
-    bottom: 0,
-    position: 'absolute'
-  },
-  navItem: {
-    flex: 1,
-    alignItems: "center",
-    padding: 20
-  },
-  subNavItem: {
-    padding: 5
-  },
-  topic: {
     textAlign: "center",
-    fontSize: 15
-  }
+    marginTop: 10,
+    paddingTop: 25,
+    paddingHorizontal: 15,
+    color: "white",
+    fontSize: 30,
+  },
 });

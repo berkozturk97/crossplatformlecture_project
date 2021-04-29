@@ -3,33 +3,15 @@ import { StyleSheet, Text, View, Image } from "react-native";
 
 import { NativeRouter, Route, Link } from "react-router-native";
 import Navbar from "./src/components/Navbar";
-
-const Products = () => <Text style={styles.header}>Home</Text>;
-
-const Categories = () => <Text style={styles.header}>About</Text>;
-
-const Topic = ({ match }) => (
-  <Text style={styles.topic}>{match.params.topicId}</Text>
-);
-
-const Orders = ({ match }) => (
-  <View>
-    <Text style={styles.header}>Orders</Text>
-    <Route path={`${match.path}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.path}
-      render={() => (
-        <Text style={styles.topic}>Please select a topic.</Text>
-      )}
-    />
-  </View>
-);
+import Categories from "./src/views/Categories";
+import Products from "./src/views/Product";
+import Orders from "./src/views/Orders";
+import { StatusBar } from "react-native";
 
 export default function App() {
-
   return (
     <NativeRouter>
+      <StatusBar backgroundColor="black" barStyle="light-content" />
       <View style={styles.container}>
         <Navbar />
         <Route exact path="/" component={Products} />
@@ -38,22 +20,20 @@ export default function App() {
       </View>
     </NativeRouter>
   );
-
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 25,
-    flex: 1
+    flex: 1,
   },
   header: {
     fontSize: 20,
   },
   subNavItem: {
-    padding: 5
+    padding: 5,
   },
   topic: {
     textAlign: "center",
-    fontSize: 15
+    fontSize: 15,
   },
 });

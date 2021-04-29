@@ -10,7 +10,6 @@ export default function Navbar() {
 
   const changeTabImage = (tab) => {
     setActiveTab(tab);
-    console.log(tab)
   }
 
   return (
