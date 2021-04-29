@@ -1,11 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FlatList } from 'react-native';
 import { StyleSheet, Text, View } from "react-native";
 import Header from '../components/Header';
-import {Loading} from '../components/Loading';
+import ListComponent from '../components/ListComponent';
+import { Loading } from '../components/Loading';
+import { getProducts } from '../api/api';
 
 function Product() {
 
   const [isVisible, setIsVisible] = useState(true);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getAllProducts();
+    setIsVisible(false)
+  }, [])
+
+  const getAllProducts = async () => {
+    let list = await getProducts();
+    setProducts(list);
+    console.log(list[0])
+  }
 
   if (isVisible) {
     return <Loading />
@@ -13,7 +28,12 @@ function Product() {
     return (
       <View style={styles.container}>
         <Header title={"Product"} />
-        <Text>Product</Text>
+
+        <FlatList
+          keyExtractor={(item) => item.id}
+          data={products}
+          renderItem={({ item }) => <ListComponent title={item.name} description={item.quantityPerUnit} />}
+        />
       </View>
     )
   }

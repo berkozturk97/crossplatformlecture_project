@@ -12,10 +12,10 @@ export default function Header({ title }) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "black",
-    height: Platform.OS === 'ios' ? 80 : 50,
+    height: Platform.OS === 'ios' ? 80 : 70,
   },
   header: {
-    marginTop: 10,
+    marginTop: 25,
     paddingTop: Platform.OS === 'ios' ? 25 : 0,
     paddingHorizontal: 15,
     color: "white",
