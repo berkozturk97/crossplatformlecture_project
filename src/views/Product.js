@@ -32,7 +32,7 @@ function Product() {
         <FlatList
           keyExtractor={(item) => item.id}
           data={products}
-          renderItem={({ item }) => <ListComponent title={item.name} description={item.quantityPerUnit} />}
+          renderItem={({ item }) => <ListComponent title={item.name} description={item.quantityPerUnit} id={item.id} />}
         />
       </View>
     )
