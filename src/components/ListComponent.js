@@ -2,9 +2,10 @@ import React from "react";
 import { StyleSheet, Text, View, Platform } from "react-native";
 import { ListItem } from 'react-native-elements'
 import { DeleteIcon } from "./DeleteIcon";
+import { EditIcon } from "./EditIcon";
 import { NumberImage } from "./NumberImage";
 
-export default function ListComponent({ title, onPress, description, id, fontSizeIcon = 20, date = null }) {
+export default function ListComponent({ title, onPressDelete, onPressEdit, description, id, fontSizeIcon = 20, date = null, edit = null }) {
   return (
     <View>
       <ListItem containerStyle={{ backgroundColor: 'black' }} >
@@ -15,8 +16,9 @@ export default function ListComponent({ title, onPress, description, id, fontSiz
         </ListItem.Content>
         {date ?
           <Text style={{ color: 'grey' }}>{date}</Text> :
-          <DeleteIcon onPress={onPress} />
+          <DeleteIcon onPress={onPressDelete} />
         }
+        {edit && <EditIcon onPress={onPressEdit} />}
       </ListItem>
     </View>
   );

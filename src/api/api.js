@@ -93,6 +93,21 @@ export const updateCategories = ({ body = null }) => {
   });
 };
 
+export const deleteCategoryById = ({ id = null }) => {
+  return new Promise((resolve, reject) => {
+    let REQUEST_URL = Global.BASE_URL + 'categories/' + id;
+    axios
+      .delete(REQUEST_URL)
+      .then((response) => {
+        resolve(response.data);
+      })
+      .catch((err) => {
+        reject(null);
+        //console.warn(err);
+      });
+  });
+};
+
 export const getOrders = () => {
   return new Promise((resolve, reject) => {
     let REQUEST_URL = Global.BASE_URL + 'orders';

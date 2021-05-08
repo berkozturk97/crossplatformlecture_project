@@ -45,7 +45,7 @@ function Product() {
           renderItem={({ item }) => (
             <ListComponent
               title={item.name}
-              onPress={() => deleteProduct(item.id)}
+              onPressDelete={() => deleteProduct(item.id)}
               description={item.quantityPerUnit}
               id={item.id}
             />

@@ -2,10 +2,10 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Image, StyleSheet } from 'react-native';
 
-export const DeleteIcon = ({ onPress }) => {
+export const EditIcon = ({ onPress }) => {
   return (
     <TouchableOpacity stlye={styles.container} onPress={onPress}>
-      <Image source={require('../assets/bin.png')} style={styles.container} />
+      <Image source={require('../assets/edit.png')} style={styles.container} />
     </TouchableOpacity>
   );
 };
