@@ -7,16 +7,19 @@ import Categories from "./src/views/Categories";
 import Products from "./src/views/Product";
 import Orders from "./src/views/Orders";
 import { StatusBar } from "react-native";
+import { ProductProvider } from "./src/context/ProductContext";
 
 export default function App() {
   return (
     <NativeRouter>
       <StatusBar backgroundColor="black" barStyle="light-content" />
       <View style={styles.container}>
-        <Route exact path="/" component={Products} />
-        <Route path="/categories" component={Categories} />
-        <Route path="/orders" component={Orders} />
-        <Navbar />
+        <ProductProvider>
+          <Route exact path="/" component={Products} />
+          <Route path="/categories" component={Categories} />
+          <Route path="/orders" component={Orders} />
+          <Navbar />
+        </ProductProvider>
       </View>
     </NativeRouter>
   );

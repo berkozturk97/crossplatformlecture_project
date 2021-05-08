@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Platform } from "react-native";
 import { ListItem, Avatar } from 'react-native-elements'
+import { Button } from "react-native-elements/dist/buttons/Button";
 import { NumberImage } from "./NumberImage";
 
 export default function ListComponent({ title, description, id }) {

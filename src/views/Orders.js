@@ -7,7 +7,7 @@ function Orders() {
   return (
     <View style={styles.container}>
       <Header title={"Orders"} />
-      <Text >Orders</Text>
+      <Text>Orders</Text>
     </View>
   )
 }
