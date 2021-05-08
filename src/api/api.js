@@ -47,6 +47,22 @@ export const getProductById = ({ id = null }) => {
   });
 };
 
+export const deleteProductById = ({ id = null }) => {
+  return new Promise((resolve, reject) => {
+    let REQUEST_URL = Global.BASE_URL + 'products/' + id;
+    axios
+      .delete(REQUEST_URL)
+      .then((response) => {
+        resolve(response.data);
+      })
+      .catch((err) => {
+        reject(null);
+        //console.warn(err);
+      });
+  });
+};
+
+
 export const addCategories = ({ body = null }) => {
   return new Promise((resolve, reject) => {
     let REQUEST_URL = Global.BASE_URL + 'categories';

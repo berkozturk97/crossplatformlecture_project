@@ -1,19 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FlatList } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "../components/Header";
 import ListComponent from "../components/ListComponent";
 import { Loading } from "../components/Loading";
-import { getProducts } from "../api/api";
+import { deleteProductById, getProducts } from "../api/api";
+import { ProductContext } from "../context/ProductContext";
 
 function Product() {
   const [isVisible, setIsVisible] = useState(true);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useContext(ProductContext);
 
   useEffect(() => {
     getAllProducts();
     setIsVisible(false);
   }, []);
+  // useEffect(() => {
+
+  // }, [products])
+
+  const deleteProduct = async (id) => {
+    let a = await deleteProductById({id})
+    const updatedProduct = products.filter((item) => item.id !== id)
+    setProducts(updatedProduct);
+  }
 
   const getAllProducts = async () => {
     let list = await getProducts();
@@ -35,6 +45,7 @@ function Product() {
           renderItem={({ item }) => (
             <ListComponent
               title={item.name}
+              onPress={() => deleteProduct(item.id)}
               description={item.quantityPerUnit}
               id={item.id}
             />

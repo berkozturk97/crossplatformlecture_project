@@ -4,7 +4,7 @@ import { ListItem } from 'react-native-elements'
 import { DeleteIcon } from "./DeleteIcon";
 import { NumberImage } from "./NumberImage";
 
-export default function ListComponent({ title, onPressDelete, description, id, fontSizeIcon = 20, date = null }) {
+export default function ListComponent({ title, onPress, description, id, fontSizeIcon = 20, date = null }) {
   return (
     <View>
       <ListItem containerStyle={{ backgroundColor: 'black' }} >
@@ -15,7 +15,7 @@ export default function ListComponent({ title, onPressDelete, description, id, f
         </ListItem.Content>
         {date ?
           <Text style={{ color: 'grey' }}>{date}</Text> :
-          <DeleteIcon onPress={onPressDelete} />
+          <DeleteIcon onPress={onPress} />
         }
       </ListItem>
     </View>
