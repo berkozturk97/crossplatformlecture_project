@@ -6,19 +6,20 @@ import ListComponent from "../components/ListComponent";
 import { Loading } from "../components/Loading";
 import { deleteProductById, getProducts } from "../api/api";
 import { ProductContext } from "../context/ProductContext";
+import { useHistory } from "react-router";
 
-function Product() {
+function Product({ navigation, ...props }) {
   const [isVisible, setIsVisible] = useState(true);
   const [products, setProducts] = useContext(ProductContext);
-
+  const history = useHistory();
   useEffect(() => {
     getAllProducts();
     setIsVisible(false);
   }, []);
-  
+
 
   const deleteProduct = async (id) => {
-    await deleteProductById({id})
+    await deleteProductById({ id })
     const updatedProduct = products.filter((item) => item.id !== id)
     setProducts(updatedProduct);
   }
@@ -46,6 +47,14 @@ function Product() {
               onPressDelete={() => deleteProduct(item.id)}
               description={item.quantityPerUnit}
               id={item.id}
+              onPress={() => {
+                navigation.navigate({
+                  name: 'ProductsDetail',
+                  params: {
+                    id: item.id,
+                  },
+                });
+              }}
             />
           )}
         />

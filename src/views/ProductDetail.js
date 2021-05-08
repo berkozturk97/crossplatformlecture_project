@@ -4,11 +4,11 @@ import { getProductById } from "../api/api";
 import Header from "../components/Header";
 import { Loading } from "../components/Loading";
 
-function ProductDetail({ location: { state } }) {
+function ProductDetail({ navigation, ...params }) {
   const [product, setProduct] = useState();
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
-    getSelectedProduct(state);
+    getSelectedProduct(params.route.params.id);
     setIsVisible(false);
   }, []);
 
