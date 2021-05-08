@@ -9,6 +9,7 @@ import Orders from "./src/views/Orders";
 import { StatusBar } from "react-native";
 import { ProductProvider } from "./src/context/ProductContext";
 import { CategoryProvider } from "./src/context/CategoryContext";
+import ProductDetail from "./src/views/ProductDetail";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <ProductProvider>
             <Route exact path="/" component={Products} />
             <Route path="/categories" component={Categories} />
+            <Route path="/productDetail/:id" component={ProductDetail} />
             <Route path="/orders" component={Orders} />
             <Navbar />
           </ProductProvider>

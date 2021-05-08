@@ -15,12 +15,10 @@ function Product() {
     getAllProducts();
     setIsVisible(false);
   }, []);
-  // useEffect(() => {
-
-  // }, [products])
+  
 
   const deleteProduct = async (id) => {
-    let a = await deleteProductById({id})
+    await deleteProductById({id})
     const updatedProduct = products.filter((item) => item.id !== id)
     setProducts(updatedProduct);
   }
