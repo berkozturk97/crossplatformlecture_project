@@ -78,9 +78,9 @@ export const addCategories = ({ body = null }) => {
   });
 };
 
-export const updateCategories = ({ body = null }) => {
+export const updateCategory = ({ body = null, id }) => {
   return new Promise((resolve, reject) => {
-    let REQUEST_URL = Global.BASE_URL + 'categories';
+    let REQUEST_URL = Global.BASE_URL + 'categories/' + id;
     axios
       .put(REQUEST_URL, body)
       .then((response) => {

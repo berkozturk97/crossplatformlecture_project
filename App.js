@@ -8,11 +8,12 @@ import { ProductProvider } from "./src/context/ProductContext";
 import { CategoryProvider } from "./src/context/CategoryContext";
 import ProductDetail from "./src/views/ProductDetail";
 ////////
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
 import { TabLabel } from "./src/components/tabmenu/TabLabel";
 import { TabIcon } from "./src/components/tabmenu/TabIcon";
+import CategoryUpdate from "./src/views/CategoryUpdate";
 const Tab = createBottomTabNavigator();
 const ProductsStack = createStackNavigator();
 const CategoriesStack = createStackNavigator();
@@ -22,29 +23,30 @@ const Stack = createStackNavigator();
 function ProductsStackScreen() {
   return (
     <ProductsStack.Navigator
-      initialRouteName={'Products'}
+      initialRouteName={"Products"}
       screenOptions={{
         headerTintColor: "blue",
-        headerTitleAlign: 'center',
+        headerTitleAlign: "center",
         title: "Products",
-      }}>
+      }}
+    >
       <ProductsStack.Screen
         name="Products"
         options={{
-          headerStyle: { backgroundColor: 'black' },
+          headerStyle: { backgroundColor: "black" },
           headerTitleStyle: { fontSize: 30 },
           headerShown: false,
-          headerTintColor: 'white',
+          headerTintColor: "white",
         }}
         component={Products}
       />
       <ProductsStack.Screen
         name="ProductsDetail"
         options={{
-          headerStyle: { backgroundColor: 'black' },
+          headerStyle: { backgroundColor: "black" },
           headerTitleStyle: { fontSize: 30 },
           headerShown: false,
-          headerTintColor: 'white',
+          headerTintColor: "white",
         }}
         component={ProductDetail}
       />
@@ -55,21 +57,32 @@ function ProductsStackScreen() {
 function CategoriesStackScreen() {
   return (
     <CategoriesStack.Navigator
-      initialRouteName={'Categories'}
+      initialRouteName={"Categories"}
       screenOptions={{
-        headerTitleAlign: 'center',
+        headerTitleAlign: "center",
         headerTintColor: "white",
-        title: "Categories"
-      }}>
+        title: "Categories",
+      }}
+    >
       <CategoriesStack.Screen
         name="Categories"
         options={{
-          headerStyle: { backgroundColor: 'black' },
-          headerTintColor: 'white',
+          headerStyle: { backgroundColor: "black" },
+          headerTintColor: "white",
           title: "Categories",
           headerShown: false,
         }}
         component={Categories}
+      />
+       <CategoriesStack.Screen
+        name="CategoryUpdate"
+        options={{
+          headerStyle: { backgroundColor: "black" },
+          headerTintColor: "white",
+          title: "Categories",
+          headerShown: false,
+        }}
+        component={CategoryUpdate}
       />
     </CategoriesStack.Navigator>
   );
@@ -78,20 +91,21 @@ function CategoriesStackScreen() {
 function OrdersStackScreen() {
   return (
     <OrdersStack.Navigator
-      initialRouteName={'Orders'}
+      initialRouteName={"Orders"}
       screenOptions={{
-        headerTitleAlign: 'center',
+        headerTitleAlign: "center",
         headerTintColor: "blue",
-      }}>
+      }}
+    >
       <OrdersStack.Screen
         name="Orders"
         options={{
           headerStyle: {
-            backgroundColor: 'black',
-            borderTopColor: 'transparent',
+            backgroundColor: "black",
+            borderTopColor: "transparent",
           },
           headerShown: false,
-          headerTintColor: 'white',
+          headerTintColor: "white",
           title: "Orders",
         }}
         component={Orders}
@@ -104,12 +118,13 @@ function TabStackScreen() {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeBackgroundColor: 'black',
-        inactiveBackgroundColor: 'black',
+        activeBackgroundColor: "black",
+        inactiveBackgroundColor: "black",
         style: {
           borderBottomWidth: 0,
         },
-      }}>
+      }}
+    >
       <Tab.Screen
         name="ProductsTab"
         component={ProductsStackScreen}
@@ -119,7 +134,7 @@ function TabStackScreen() {
             <TabLabel title={"Products"} focused={focused} />
           ),
           tabBarIcon: ({ focused, color, size }) => (
-            <TabIcon size={size} focused={focused} iconName={'products'} />
+            <TabIcon size={size} focused={focused} iconName={"products"} />
           ),
         }}
       />
@@ -131,7 +146,7 @@ function TabStackScreen() {
             <TabLabel title={"Categories"} focused={focused} />
           ),
           tabBarIcon: ({ focused, color, size }) => (
-            <TabIcon size={size} focused={focused} iconName={'categories'} />
+            <TabIcon size={size} focused={focused} iconName={"categories"} />
           ),
         }}
       />
@@ -144,7 +159,7 @@ function TabStackScreen() {
             <TabLabel title={"Orders"} focused={focused} />
           ),
           tabBarIcon: ({ focused, color, size }) => (
-            <TabIcon size={size} focused={focused} iconName={'orders'} />
+            <TabIcon size={size} focused={focused} iconName={"orders"} />
           ),
         }}
       />
@@ -152,13 +167,12 @@ function TabStackScreen() {
   );
 }
 
-
 export default function App() {
   return (
-
     <NavigationContainer>
       <CategoryProvider>
         <ProductProvider>
+          <StatusBar backgroundColor="black" barStyle="dark-content"  />
           <Stack.Navigator>
             <Stack.Screen
               name="TabNav"

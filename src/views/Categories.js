@@ -7,7 +7,7 @@ import { Loading } from "../components/Loading";
 import { deleteCategoryById, getCategories } from "../api/api";
 import { CategoryContext } from "../context/CategoryContext";
 
-function Categories() {
+function Categories({ navigation }) {
   const [isVisible, setIsVisible] = useState(true);
   const [categories, setCategories] = useContext(CategoryContext);
 
@@ -17,10 +17,10 @@ function Categories() {
   }, []);
 
   const deleteCategory = async (id) => {
-    await deleteCategoryById({id})
-    const updatedCategories = categories.filter((item) => item.id !== id)
+    await deleteCategoryById({ id });
+    const updatedCategories = categories.filter((item) => item.id !== id);
     setCategories(updatedCategories);
-  }
+  };
 
   const getAllCategories = async () => {
     let list = await getCategories();
@@ -45,6 +45,14 @@ function Categories() {
               onPressDelete={() => deleteCategory(item.id)}
               description={item.description}
               id={item.id}
+              onPressEdit={() => {
+                navigation.navigate({
+                  name: "CategoryUpdate",
+                  params: {
+                    category: item,
+                  },
+                });
+              }}
               edit={true}
             />
           )}
