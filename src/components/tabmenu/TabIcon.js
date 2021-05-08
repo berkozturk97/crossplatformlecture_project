@@ -14,16 +14,16 @@ export const TabIcon = ({iconName = 'covers', ...props}) => {
 
   let images = {
     products: {
-      focused: require('../../assets/nav-icons/covers.png'),
-      unfocused: require('../../assets/nav-icons/covers1.png'),
+      focused: require('../../assets/nav-icons/Products.png'),
+      unfocused: require('../../assets/nav-icons/ProductsOff.png'),
     },
     categories: {
-      focused: require('../../assets/nav-icons/heart.png'),
-      unfocused: require('../../assets/nav-icons/heart1.png'),
+      focused: require('../../assets/nav-icons/Categories.png'),
+      unfocused: require('../../assets/nav-icons/CategoriesOff.png'),
     },
     orders: {
-      focused: require('../../assets/nav-icons/layers.png'),
-      unfocused: require('../../assets/nav-icons/layers1.png'),
+      focused: require('../../assets/nav-icons/Orders.png'),
+      unfocused: require('../../assets/nav-icons/OrdersOff.png'),
     },
   };
 

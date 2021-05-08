@@ -63,7 +63,7 @@ export const deleteProductById = ({ id = null }) => {
 };
 
 
-export const addCategories = ({ body = null }) => {
+export const addCategory = ({ body = null }) => {
   return new Promise((resolve, reject) => {
     let REQUEST_URL = Global.BASE_URL + 'categories';
     axios

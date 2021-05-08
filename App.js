@@ -14,6 +14,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { TabLabel } from "./src/components/tabmenu/TabLabel";
 import { TabIcon } from "./src/components/tabmenu/TabIcon";
 import CategoryUpdate from "./src/views/CategoryUpdate";
+import CategoryAdd from "./src/views/CategoryAdd";
 const Tab = createBottomTabNavigator();
 const ProductsStack = createStackNavigator();
 const CategoriesStack = createStackNavigator();
@@ -74,15 +75,25 @@ function CategoriesStackScreen() {
         }}
         component={Categories}
       />
-       <CategoriesStack.Screen
+      <CategoriesStack.Screen
         name="CategoryUpdate"
         options={{
           headerStyle: { backgroundColor: "black" },
           headerTintColor: "white",
-          title: "Categories",
+          title: "Category Update",
           headerShown: false,
         }}
         component={CategoryUpdate}
+      />
+      <CategoriesStack.Screen
+        name="CategoryAdd"
+        options={{
+          headerStyle: { backgroundColor: "black" },
+          headerTintColor: "white",
+          title: "Category Add",
+          headerShown: false,
+        }}
+        component={CategoryAdd}
       />
     </CategoriesStack.Navigator>
   );
@@ -172,7 +183,7 @@ export default function App() {
     <NavigationContainer>
       <CategoryProvider>
         <ProductProvider>
-          <StatusBar backgroundColor="black" barStyle="dark-content"  />
+          <StatusBar backgroundColor="black" barStyle="dark-content" />
           <Stack.Navigator>
             <Stack.Screen
               name="TabNav"

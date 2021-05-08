@@ -34,7 +34,7 @@ function Categories({ navigation }) {
   } else {
     return (
       <View style={styles.container}>
-        <Header title={"Categories"} />
+        <Header title={"Categories"} onPressRightButton={()=> navigation.navigate('CategoryAdd')} />
 
         <FlatList
           keyExtractor={(item) => item.id}
