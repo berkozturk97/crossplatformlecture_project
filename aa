@@ -1,0 +1,127 @@
+[33mcommit ab3eb5b78ef0abefc2ed5856e2508e6be374b2f0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: unknown <necatiayan33@gmail.com>
+Date:   Sat May 8 18:12:44 2021 +0300
+
+    Readme Added
+
+[33mcommit baa41bbf6329b05f919f0ba89897ae834084df82[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Sat May 8 18:02:09 2021 +0300
+
+    Add Category and change icons
+
+[33mcommit 4beb09e429cc3dc6039779429d5ffb8e867215cd[m
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Sat May 8 17:37:03 2021 +0300
+
+    category update
+
+[33mcommit 76069607c898b417dc09a1e4c5b5a1f271deb52e[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Sat May 8 16:22:35 2021 +0300
+
+    react-router-native to react-navigation
+
+[33mcommit 0af207aec3dfdd317067e67fbdde3846776631d6[m
+Merge: 1503657 6801e35
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Sat May 8 15:21:52 2021 +0300
+
+    merge
+
+[33mcommit 150365704f42f4e5e93f941d846f236a48f8a024[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Sat May 8 15:16:43 2021 +0300
+
+    category page
+
+[33mcommit 6801e3577b4d066ed7b787a65e9cc112a1beb4ab[m
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Sat May 8 15:16:27 2021 +0300
+
+    product detail page v1
+
+[33mcommit ac2caa598d016b897343e6600941ca32db861782[m
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Sat May 8 14:13:11 2021 +0300
+
+    delete product api integrated
+
+[33mcommit 200ada89e3d1aad0820dec8771f57443107a5d45[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Sat May 8 13:44:05 2021 +0300
+
+    Adding delete icon and orders
+
+[33mcommit e47c8f1b9c69b4bdba730f8e49260469b6600895[m
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Sat May 8 12:55:20 2021 +0300
+
+    context setup
+
+[33mcommit d117f9a6941859371fb45a2f68d11b6ba5401f09[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Fri Apr 30 14:46:10 2021 +0300
+
+    ListItem image added.
+
+[33mcommit aedc5c891863c7d02d69dd72b2c819d345bc1220[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Fri Apr 30 02:16:12 2021 +0300
+
+    Product list fetch and showing
+
+[33mcommit fff88b168c71598fc25a4a5b1c465d61112f8d90[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Fri Apr 30 01:38:47 2021 +0300
+
+    typo bug fixed
+
+[33mcommit 197fcdee0009e3fdd052071824f44cbde86ebf68[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Fri Apr 30 01:37:46 2021 +0300
+
+    header for android
+
+[33mcommit ea18f0c70a6b194101a4893b782cf7935db4942b[m
+Merge: e7714c4 247c5e5
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Fri Apr 30 01:17:51 2021 +0300
+
+    merge
+
+[33mcommit e7714c4d21a8260f2f61b90c2de03a8df22cfe58[m
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Fri Apr 30 01:16:42 2021 +0300
+
+    views folder created and headers implemented
+
+[33mcommit 247c5e5b9082fbff9b9b930251e783cf882b5a7a[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Fri Apr 30 01:13:03 2021 +0300
+
+    Loading Bar
+
+[33mcommit 09fef4593f57b63ad23be0e5d6b730f56559e713[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Fri Apr 30 01:07:31 2021 +0300
+
+    Adding APIs
+
+[33mcommit 8f001ce352daea3b8fab6955012b32f951290b00[m
+Author: seckinbrke <seckin_brke@hotmail.com>
+Date:   Fri Apr 30 00:35:20 2021 +0300
+
+    Bottom navbar, router integration
+
+[33mcommit 8cf65699e3a883a9100b936084654004c543cc89[m
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Thu Apr 29 22:53:08 2021 +0300
+
+    first commit
+
+[33mcommit 5952367804f9461186e0d8810cea8547da038766[m
+Author: Berk Ozturk <34316304+berkozturk97@users.noreply.github.com>
+Date:   Thu Apr 29 22:50:40 2021 +0300
+
+    Created a new Expo app
