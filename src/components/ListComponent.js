@@ -9,10 +9,10 @@ import { NumberImage } from "./NumberImage";
 export default function ListComponent({ onPress, title, onPressDelete, onPressEdit, description, id, fontSizeIcon = 20, date = null, edit = null }) {
   return (
     <TouchableOpacity onPress={onPress}>
-      <ListItem containerStyle={{ backgroundColor: "black" }}>
+      <ListItem containerStyle={{ backgroundColor: "white" }}>
         <NumberImage fontSizeIcon={fontSizeIcon} number={id} />
         <ListItem.Content>
-          <ListItem.Title style={{ color: "white" }}>{title}</ListItem.Title>
+          <ListItem.Title style={{ color: "black" }}>{title}</ListItem.Title>
           <ListItem.Subtitle style={{ color: "grey" }}>
             {description}
           </ListItem.Subtitle>
@@ -29,14 +29,14 @@ export default function ListComponent({ onPress, title, onPressDelete, onPressEd
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "black",
+    backgroundColor: "white",
     height: Platform.OS === "ios" ? 80 : 50,
   },
   header: {
     marginTop: 10,
     paddingTop: Platform.OS === "ios" ? 25 : 0,
     paddingHorizontal: 15,
-    color: "white",
+    color: "black",
     fontSize: 30,
   },
 });

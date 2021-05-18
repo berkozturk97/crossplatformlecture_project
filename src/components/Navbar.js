@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     position: 'absolute',
     zIndex: 10,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     flex: 6,
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   navText: {
-    color: 'white',
+    color: 'black',
     fontSize: 12
   },
   imgStyle: {

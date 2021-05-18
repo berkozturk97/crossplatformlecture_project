@@ -13,7 +13,7 @@ export const TabLabel = ({title = '', ...props}) => {
     <Text
       style={[
         styles.text,
-        focused ? {color: 'white'} : {color: "grey"},
+        focused ? {color: 'black'} : {color: "grey"},
       ]}>
       {title}
     </Text>

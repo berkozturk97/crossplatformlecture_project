@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   number: {
-    color: 'white'
+    color: 'black'
   }
 });

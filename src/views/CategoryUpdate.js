@@ -58,13 +58,13 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     paddingRight: 20,
     paddingLeft: 20,
-    backgroundColor: "black",
+    backgroundColor: "white",
   },
   input: {
-    color: "white",
+    color: "black",
   },
   mainTitle: {
-    color: "white",
+    color: "black",
     fontSize: 20,
   },
 });

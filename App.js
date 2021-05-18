@@ -112,7 +112,7 @@ function OrdersStackScreen() {
         name="Orders"
         options={{
           headerStyle: {
-            backgroundColor: "black",
+            backgroundColor: "white",
             borderTopColor: "transparent",
           },
           headerShown: false,
@@ -129,8 +129,8 @@ function TabStackScreen() {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeBackgroundColor: "black",
-        inactiveBackgroundColor: "black",
+        activeBackgroundColor: "white",
+        inactiveBackgroundColor: "white",
         style: {
           borderBottomWidth: 0,
         },

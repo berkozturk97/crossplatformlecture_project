@@ -39,13 +39,13 @@ function ProductDetail({ navigation, ...params }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: "white",
   },
   textContainer: {
     margin: 20
   },
   mainTitle: {
-    color: "white",
+    color: "black",
     fontSize: 20,
   },
 });

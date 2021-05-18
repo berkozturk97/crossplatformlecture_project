@@ -17,7 +17,7 @@ export default function Header({ title, onPressRightButton }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "black",
+    backgroundColor: "white",
     flexDirection: "row",
     justifyContent: "space-between",
     height: Platform.OS === "ios" ? 80 : 70,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
     paddingTop: Platform.OS === "ios" ? 25 : 0,
     paddingHorizontal: 15,
-    color: "white",
+    color: "black",
     fontSize: 30,
   },
 });
