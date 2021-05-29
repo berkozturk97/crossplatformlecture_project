@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
     marginTop: 25,
     paddingTop: Platform.OS === "ios" ? 25 : 0,
     paddingHorizontal: 15,
-    color: "black",
-    fontSize: 30,
+    color:"#800080",
+    fontSize: 25,
+    fontWeight:"600"
   },
 });
