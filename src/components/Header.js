@@ -19,13 +19,14 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     flexDirection: "row",
+    alignItems:"center",
     justifyContent: "space-between",
     height: Platform.OS === "ios" ? 80 : 70,
   },
   icon: {
     width: 25,
     height: 25,
-    marginTop: 28,
+    marginTop: 40,
     marginRight: 15,
   },
   header: {
